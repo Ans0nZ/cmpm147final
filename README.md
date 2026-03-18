@@ -1,144 +1,127 @@
-# Combat Shuang
+# 2D Roguelike Game (CMPM 147 Final Project)
 
-## Team Information
-**Team 35**
+## 🎮 Overview
+This project is a fully playable 2D roguelike game developed in Unity. The player navigates through a series of combat encounters, gains experience, selects upgrades, and attempts to survive as long as possible.
 
-**Team Members**
-- Fang, Darren
-- Fong, Anson
-- Li, Chengkun
-- Wang, Shaoan
-- Yao, Peichen
-- Guo, Mingze
+The game emphasizes replayability through procedural generation systems that create variation in each run. No two playthroughs are exactly the same due to dynamic generation of upgrades, enemies, and encounter structure.
+
+---
+
+## 🔁 Core Gameplay Loop
+- Start a new run
+- Enter procedurally generated encounters
+- Defeat enemies
+- Gain experience and level up
+- Choose one of several generated upgrades
+- Progress to the next encounter
+- Continue until death
+- Restart with a new generated run
+
+This loop supports multiple playthroughs and creates a classic roguelike progression structure.
+
+---
+
+## ⚙️ Procedural Generation Systems
+
+This project includes **live procedural generation at runtime**, ensuring that gameplay content is generated during play rather than pre-authored.
+
+### 1. Upgrade Generation (Runtime)
+- Each level-up presents randomized upgrade options
+- Upgrades are generated from stat ranges (damage, crit rate, speed, etc.)
+- Players build different character configurations each run
+
+### 2. Enemy / Encounter Generation (Runtime)
+- Enemy types and group compositions vary per encounter
+- Procedural variation affects difficulty and pacing
+- Each room creates a different combat scenario
+
+### 3. Progression Structure (Map Flow)
+- Encounters are arranged in a procedurally determined sequence
+- The order and pacing of gameplay differs across runs
+
+These systems work together to produce meaningful variation rather than simple randomness.
+
+---
+
+## 🧠 Midterm Tool Usage
+
+This project reuses multiple generator tools developed during the midterm.
+
+### ✅ Upgrade Generator (Internal Tool)
+- Generates randomized level-up options
+- Directly used in gameplay
+- Controls player progression and build diversity
+
+### ✅ Map / Progression Generator (Internal Tool)
+- Defines encounter flow and structure of each run
+- Supports replayability by altering progression paths
+
+### ✅ Affix / Modifier Generator (Internal Tool)
+- Generates variations in enemy behavior or attributes
+- Adds systemic complexity and emergent gameplay
+
+---
+
+## 🌐 External Tool
+
+### Procedural Naming Generator
+
+An external procedural naming generator was incorporated to enhance content variation and thematic consistency.
+
+This tool dynamically generates names for:
+- enemy types
+- modifiers (affixes)
+- potential encounter labels
+
+It combines predefined word pools (prefixes, descriptors, and types) to produce names such as:
+- "Flaming Splitter"
+- "Swift Devourer"
+- "Corrupted Guardian"
+
+Although lightweight, this tool strengthens the perception of variety and reinforces the procedural nature of the game.
+
+The tool was adapted and integrated into the content pipeline.
+
+---
+
+## 🌍 Live Procedural Requirement
+
+At least one system (upgrade generation and enemy generation) runs **during gameplay**, ensuring true runtime procedural generation.
+
+Even when using fixed seeds for testing, generation occurs live during each run.
+
+---
+
+## ▶️ Play the Game
+
+👉 [INSERT YOUR LINK HERE]  
+(e.g. Itch.io / GitHub Pages)
+
+---
+
+## 🧑‍🤝‍🧑 Team Contributions
+
+- Anson F. — Game design, programming, procedural systems, UI implementation
 
 
-## Project Overview
-Combat Shuang is a wave-based action game where players survive enemy encounters, gain XP, and upgrade their abilities while progressing through different maps.
+---
 
-## Individual Contributions
+## 📦 Credits
 
-### Fang, Darren
-- Worked on:
-    - Player sprites
-    - Enemy sprites
-    - Upgrade option icons
-- Implemented:
-    - Player sprite animations
-    - Enemy sprite animations
-    - New font for the entire game
-- Helped with:
-    - Upgrade system icons
+- Unity Engine
+- Midterm generator tools (internal)
+- External procedural naming system
+- Any additional assets (if used)
 
-### Fong, Anson
-- Worked on:
-    - The upgrade system
-- Implemented:
-    - Parts of the upgrade system
-- Helped with:
-    - Parts of the upgrade system
+---
 
-### Li, Chengkun
-- Worked on:
-    - Player behavior design
-    - Enemy behavior design
-    - The upgrade system
-    - Scene setup and transition
-    - Map boundary obstacles
-    - Music and sound effect implementation
-- Implemented:
-    - Player movement
-    - Enemy pathfinding and attack behavior
-    - Wave spawning
-    - Basic upgrade system
-    - Level map transitions
-    - Map boundary obstacles
-    - Debug mode
-    - Pause menu
-    - In-game HUDs
-    - Background music
-    - Sound effects
-- Helped with:
-    - The upgrade system
-    - Map boundaries
-    - Game difficulty parameter tuning
+## 🤖 AI Disclosure
 
-### Wang, Shaoan
-- Worked on:
-    - Player animations
-    - Enemy animations
-    - Basic upgrade system
-- Implemented:
-    - Player animations
-    - Enemy animations
-    - Basic upgrade system
-    - Implementation of the upgrade system
-- Helped with:
-    - The upgrade system
+AI tools (such as ChatGPT) were used for:
+- brainstorming design ideas
+- refining documentation
+- debugging assistance
 
-### Yao, Peichen
-- Worked on:
-    - Map design
-    - Map mechanics
-    - Boss design
-- Implemented:
-    - Map layouts
-    - The spinning knife mechanic
-    - The fireball mechanic
-    - Boss attack patterns
-    - Boss animations
-    - Player-boss interactions
-    - Portal animations
-- Helped with:
-    - Gameplay design
-    - Iteration
+All final implementation, integration, and design decisions were completed by the developer.
 
-### Guo, Mingze
-- Worked on:
-    - Localization
-    - UI design
-- Implemented:
-    - Translation support for Chinese, English, and Japanese
-    - The main menu
-    - The settings scene
-    - The credits scene
-    - The game over screen
-- Helped with:
-    - Pause menu design
-    - Pause menu implementation
-
-# Credit
-
-## Font
-- `Tiny5-Regular.ttf` - Stefan Schmidt, Google Fonts: https://fonts.google.com/specimen/Tiny5?query=pixel
-
-## Music
-- `BGM_level1.mp3` - NiKneT_Art, Pixabay: https://pixabay.com/music/video-games-retro-8bit-happy-videogame-music-418485/
-- `BGM_level2.mp3` - inono777, Pixabay: https://pixabay.com/music/upbeat-game-8-bit-399898/
-- `BGM_level3.mp3` - David Renda, Fesliyan Studios: https://www.fesliyanstudios.com/royalty-free-music/download/boss-time/2340
-- `BGM_gameOver.mp3` - attribution notes mention both XtremeFreddy and Gaston A-P, Pixabay: https://pixabay.com/music/video-games-warningfalselyclaimed-bit-beats-3-168873/
-
-## Sound Effects
-- `SFX_PlayButtonClick.mp3` - Eponn (Freesound) / freesound_community, Pixabay: https://pixabay.com/sound-effects/film-special-effects-beep-6-96243/
-- `SFX_NextWaveCountDown.mp3` - Lesiakower, Pixabay: https://pixabay.com/sound-effects/film-special-effects-countdown-sound-effect-8-bit-151797/
-- `SFX_PlayerFiring.mp3` - attribution notes mention both SoundReality and Jurij, Pixabay: https://pixabay.com/sound-effects/film-special-effects-pop-423717/
-- `SFX_PlayerDashing.mp3` - Lumora Studios, Pixabay: https://pixabay.com/sound-effects/film-special-effects-pixel-jump-319167/
-- `SFX_PlayerGotHit.mp3` - unknown author, Pixabay: https://pixabay.com/sound-effects/film-special-effects-8-bit-game-sfx-sound-21-269970/
-- `SFX_PlayerLevelUp.mp3` - u_o8xh7gwsrj, Pixabay: https://pixabay.com/sound-effects/technology-correct-answer-toy-bi-bling-476370/
-- `SFX_LevelUp.mp3` - floraphonic, Pixabay: https://pixabay.com/sound-effects/film-special-effects-arcade-ui-1-229498/
-- `SFX_Value_Up.mp3` - pooky1 (Freesound) / freesound_community, Pixabay: https://pixabay.com/sound-effects/film-special-effects-countdown-beeps-remixed-101153/
-- `SFX_GameOver.mp3` - Tuomas_Data, Pixabay: https://pixabay.com/sound-effects/musical-game-over-39-199830/
-- `SFX_EnemyGOGotHit.mp3` - u_xjrmmgxfru, Pixabay: https://pixabay.com/sound-effects/film-special-effects-hit-flesh-02-266309/
-- `SFX_EnemySauceGotHit.mp3` - source not documented yet
-- `SFX_EnemyChliGotHit.mp3` - u_xjrmmgxfru, Pixabay: https://pixabay.com/sound-effects/film-special-effects-hit-flesh-03-266308/
-
-## AI tools
-- ChatGPT
-    - Find bugs
-    - Generate image materials
-    - Code Recommendation
-- Cursor
-    - Find and fix bugs
-    - Code Recommendation
-    - improve code structure
-- Pixellab
-    - Generate image materials
+---

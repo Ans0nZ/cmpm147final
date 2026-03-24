@@ -49,7 +49,7 @@ These systems emphasize systemic variation rather than purely random outcomes, a
 
 ## 🧠 Midterm Tool Usage
 
-This project reuses multiple generator tools developed during CMPM 171.
+This project reuses multiple generator tools developed during CMPM 147.
 
 ### ✅ Upgrade Generator (Internal Tool)
 - Generates randomized level-up options

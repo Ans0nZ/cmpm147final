@@ -5,6 +5,8 @@ This project is a fully playable 2D roguelike game developed in Unity. The playe
 
 The game emphasizes replayability through procedural generation systems that create variation in each run. No two playthroughs are exactly the same due to dynamic generation of upgrades, enemies, and encounter structure.
 
+This project builds upon systems originally developed in CMPM 171 and expands them into a complete roguelike experience.
+
 ---
 
 ## 🔁 Core Gameplay Loop
@@ -17,7 +19,7 @@ The game emphasizes replayability through procedural generation systems that cre
 - Continue until death
 - Restart with a new generated run
 
-This loop supports multiple playthroughs and creates a classic roguelike progression structure.
+This loop supports multiple playthroughs and demonstrates core roguelike structure.
 
 ---
 
@@ -41,11 +43,13 @@ This project includes **live procedural generation at runtime**, ensuring that g
 
 These systems work together to produce meaningful variation rather than simple randomness.
 
+These systems emphasize systemic variation rather than purely random outcomes, aligning with procedural design principles discussed in the course.
+
 ---
 
 ## 🧠 Midterm Tool Usage
 
-This project reuses multiple generator tools developed during the midterm.
+This project reuses multiple generator tools developed during CMPM 171.
 
 ### ✅ Upgrade Generator (Internal Tool)
 - Generates randomized level-up options
@@ -66,19 +70,19 @@ This project reuses multiple generator tools developed during the midterm.
 
 ### Procedural Naming Generator
 
-An external procedural naming generator was incorporated to enhance content variation and thematic consistency.
+We adapted a lightweight procedural naming generator inspired by common content generation techniques used in roguelike design.
 
-This tool dynamically generates names for:
+This system generates dynamic names for:
 - enemy types
 - modifiers (affixes)
-- potential encounter labels
+- encounter labels
 
 It combines predefined word pools (prefixes, descriptors, and types) to produce names such as:
 - "Flaming Splitter"
 - "Swift Devourer"
 - "Corrupted Guardian"
 
-Although lightweight, this tool strengthens the perception of variety and reinforces the procedural nature of the game.
+Although lightweight, this system enhances perceived variety and reinforces the procedural nature of the game.
 
 The tool was adapted and integrated into the content pipeline.
 
@@ -94,8 +98,9 @@ Even when using fixed seeds for testing, generation occurs live during each run.
 
 ## ▶️ Play the Game
 
-👉 [INSERT YOUR LINK HERE]  
-(e.g. Itch.io / GitHub Pages)
+The game supports multiple runs and is designed to demonstrate procedural variation across playthroughs.
+
+👉 https://zsso.itch.io/combat-shuang
 
 ---
 
@@ -103,14 +108,13 @@ Even when using fixed seeds for testing, generation occurs live during each run.
 
 - Anson F. — Game design, programming, procedural systems, UI implementation
 
-
 ---
 
 ## 📦 Credits
 
 - Unity Engine
 - Midterm generator tools (internal)
-- External procedural naming system
+- Procedural naming system (adapted external technique)
 - Any additional assets (if used)
 
 ---
